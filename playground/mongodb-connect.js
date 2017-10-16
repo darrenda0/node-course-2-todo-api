@@ -2,6 +2,7 @@
 // const MongoClient = require('mongodb').MongoClient;
 const {MongoClient, ObjectID} = require('mongodb');
 
+//Client connects to MongoDB database: TodoApp
 MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
     if (err) {
         return console.log('Unable to connect to MongoDB server');
@@ -20,10 +21,10 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
     // });
 
 
-    // // Insert new doc into Users (name, age, location)
-    // db.collection('User').insertOne({
-    //     name: 'Andrew',
-    //     age: 19,
+    // Insert new doc into Users (name, age, location)
+    // db.collection('Users').insertOne({
+    //     name: 'Jessica',
+    //     age: 10,
     //     location: 'San Luis Obispo'
     // }, (err, result) => {
     //     if (err) {
@@ -33,5 +34,5 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
     // });
 
     // close database connection
-    db.close();
+    // db.close();
 });
